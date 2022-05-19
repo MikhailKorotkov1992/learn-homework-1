@@ -1,6 +1,4 @@
-"""
-
-Домашнее задание №1
+""" student Korotkov Mikhail
 
 Условный оператор: Возраст
 
@@ -14,12 +12,25 @@
 
 """
 
+def line_of_work(age):
+    if age <= 5:
+        return 'Детский сад'
+    elif 6 <= age <= 15:
+        return 'Школа'
+    elif 16 <= age <= 21:
+        return 'Вуз'
+    else:
+        return 'Работа'
+
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    while True:
+      age = input('Сколько Вам лет?: ')
+      try:  
+          determined_line = line_of_work(int(age))
+          print(f'Ваш род деятельности - {determined_line}')
+          break
+      except ValueError:
+          print('Вы ввели что-то не то, попробуйте еще раз')
 
 if __name__ == "__main__":
     main()

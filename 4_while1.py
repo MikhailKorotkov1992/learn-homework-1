@@ -1,4 +1,4 @@
-"""
+""" student Mikhail Korotkov
 
 Домашнее задание №1
 
@@ -9,13 +9,13 @@
    
 """
 
+right_answer = 'хорошо'
+answer = ''
 
-def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+def hello_user(right_answer, answer):
+    while answer.lower() != right_answer:
+        answer = input('Как дела?: ')
 
     
 if __name__ == "__main__":
-    hello_user()
+    hello_user(right_answer, answer)
